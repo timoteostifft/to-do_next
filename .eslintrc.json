@@ -1,5 +1,5 @@
 {
-  "extends": ["airbnb", "airbnb/hooks"],
+  "extends": ["airbnb-typescript"],
   "parser": "@typescript-eslint/parser",
   "env": {
     "browser": true,
@@ -13,6 +13,47 @@
       { "extensions": [".js", ".jsx", ".tsx"] }
     ],
     "react/jsx-props-no-spreading": "off",
-    "quotes": ["error", "double"]
+    "quotes": ["error", "double"],
+    "space-before-function-paren": "off",
+    "react/function-component-definition": "off",
+    "react/prop-types": "off",
+    "no-use-before-define": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "import/prefer-default-export": "off",
+    "no-nested-ternary": "off",
+    "eslint-disable-camelcase": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-non-interactive-element-interactions": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "react/require-default-props": "off",
+    "no-param-reassign": "off",
+    "camelcase": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "import/no-cycle": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react/jsx-no-useless-fragment": "off",
+    "react/jsx-no-bind": "off",
+    "react/no-unstable-nested-components": "off",
+    "react/display-name": "off",
+    "no-unsafe-optional-chaining": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "react/jsx-no-constructed-context-values": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
   }
 }
