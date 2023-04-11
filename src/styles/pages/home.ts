@@ -6,5 +6,5 @@ export const HomeContainer = styled.main`
   margin-top: -2.4rem;
   border-radius: 10px 10px 0 0;
 
-  background: #f0f1f9;
+  background: ${(props) => props.theme.colors[props.theme.default]["100"]}; ;
 `;

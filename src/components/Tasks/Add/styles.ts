@@ -14,7 +14,7 @@ export const AddContainer = styled.button`
   border: none;
   border-radius: 8px;
 
-  background: #454bb6;
+  background: ${(props) => props.theme.colors[props.theme.default]["900"]};
 
   z-index: 1;
 
@@ -24,6 +24,5 @@ export const AddContainer = styled.button`
 
   svg {
     color: white;
-    font-size: 1.6rem;
   }
 `;

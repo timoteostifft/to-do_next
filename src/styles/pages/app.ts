@@ -15,7 +15,8 @@ export const AppHeader = styled.header`
   margin: 0 auto;
   padding: 20px 20px 4rem 20px;
 
-  background-color: #454bb6;
+  background-color: ${(props) =>
+    props.theme.colors[props.theme.default]["900"]};
   color: white;
 
   gap: 2rem;
@@ -24,6 +25,17 @@ export const AppHeader = styled.header`
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    button:nth-child(1) {
+      border: none;
+      height: 40px;
+      width: 40px;
+      background: none;
+
+      svg {
+        color: white;
+      }
+    }
   }
 
   > div:nth-child(1) {
