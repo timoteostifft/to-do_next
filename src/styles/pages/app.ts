@@ -15,8 +15,7 @@ export const AppHeader = styled.header`
   margin: 0 auto;
   padding: 20px 20px 4rem 20px;
 
-  background-color: ${(props) =>
-    props.theme.colors[props.theme.default]["900"]};
+  background-color: ${(props) => props.theme.colors[props.theme.main]["900"]};
   color: white;
 
   gap: 2rem;

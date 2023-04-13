@@ -4,8 +4,7 @@ export const DayContainer = styled.button`
   display: flex;
   flex-direction: column;
   border: none;
-  background-color: ${(props) =>
-    props.theme.colors[props.theme.default]["600"]};
+  background-color: ${(props) => props.theme.colors[props.theme.main]["600"]};
   border-radius: 6px;
 
   width: 40px;
@@ -21,7 +20,7 @@ export const DayContainer = styled.button`
   span {
     margin-top: -4px;
     font-weight: 500;
-    color: ${(props) => props.theme.colors[props.theme.default]["300"]};
+    color: ${(props) => props.theme.colors[props.theme.main]["300"]};
     font-size: 0.65rem;
   }
 `;

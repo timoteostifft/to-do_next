@@ -22,5 +22,10 @@ export const Button = styled.button<ButtonProps>`
     font-weight: 500;
   }
 
-  ${(props) => (props.selected ? "border-bottom: 2px solid #454bb6;;" : "")}
+  ${(props) =>
+    props.selected
+      ? `border-bottom: 2px solid ${
+          props.theme.colors[props.theme.main]["900"]
+        };`
+      : ""}
 `;

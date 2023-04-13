@@ -14,7 +14,7 @@ export const AddContainer = styled.button`
   border: none;
   border-radius: 8px;
 
-  background: ${(props) => props.theme.colors[props.theme.default]["900"]};
+  background: ${(props) => props.theme.colors[props.theme.main]["900"]};
 
   z-index: 1;
 
