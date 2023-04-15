@@ -3,11 +3,13 @@ import { SidebarContainer } from "./styles";
 
 import { TbArrowBarToLeft } from "react-icons/tb";
 import { FcCalendar, FcPackage, FcCloseUpMode } from "react-icons/fc";
+
 import Item from "./Item";
+import ThemeSelection from "./Expandable/ThemeSelection";
+import History from "../Modals/History";
 
 interface Props {
   handleSetIsSidebarOpen: () => void;
-  handleSetTheme: (main: "purple" | "red" | "green") => void;
 }
 
 export default function Sidebar({ handleSetIsSidebarOpen }: Props) {
@@ -19,17 +21,24 @@ export default function Sidebar({ handleSetIsSidebarOpen }: Props) {
         </button>
       </header>
 
-      <motion.div
-        className="box"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+      <Item
+        name="Theme"
+        children={<ThemeSelection />}
+        icon={<FcCloseUpMode size={20} />}
+        isExpandable={true}
       />
 
-      <Item name="Theme" icon={<FcCloseUpMode size={20} />} />
+      <Item
+        name="History"
+        children={<History />}
+        icon={<FcPackage size={20} />}
+      />
 
-      <Item name="History" icon={<FcPackage size={20} />} />
-
-      <Item name="Calendar" icon={<FcCalendar size={20} />} />
+      <Item
+        name="Calendar"
+        children={<History />}
+        icon={<FcCalendar size={20} />}
+      />
     </SidebarContainer>
   );
 }
