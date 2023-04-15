@@ -6,7 +6,6 @@ export const SidebarContainer = styled.div`
   height: 100vh;
   padding: 20px 10px;
 
-  z-index: 2;
   background: ${(props) => props.theme.colors[props.theme.main]["100"]};
 
   -webkit-box-shadow: 22px 0px 50px 50px rgba(0, 0, 0, 0.3);
