@@ -5,7 +5,7 @@ import { MdAdd } from "react-icons/md";
 export default function Add() {
   return (
     <AddContainer>
-      <MdAdd />
+      <MdAdd size={28} />
     </AddContainer>
   );
 }
