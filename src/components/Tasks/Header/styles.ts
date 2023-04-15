@@ -19,6 +19,7 @@ export const Button = styled.button<ButtonProps>`
   width: 100%;
 
   span {
+    color: ${(props) => props.theme.colors[props.theme.main]["900"]};
     font-weight: 500;
   }
 
