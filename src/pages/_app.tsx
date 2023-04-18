@@ -47,7 +47,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <Component {...pageProps} />
           </AppContainer>
           <motion.div
-            animate={{ x: isSideBarOpen ? -400 : 0 }}
+            animate={{ x: isSideBarOpen ? 0 : -600 }}
             transition={{ duration: 0.2 }}
             style={{ position: "absolute", top: 0, left: 0 }}
           >
