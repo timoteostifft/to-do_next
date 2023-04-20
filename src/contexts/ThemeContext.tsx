@@ -1,6 +1,6 @@
 import Theme from "@/@types/theme";
 import colors from "@/styles/colors";
-import { createContext, ReactNode, useState } from "react";
+import { createContext, ReactNode, useEffect, useState } from "react";
 
 interface ThemeContextType {
   theme: Theme;
@@ -16,10 +16,13 @@ interface Props {
 export function ThemeContextProvider({ children }: Props) {
   const [theme, setTheme] = useState<Theme>({
     main: "purple",
-    colors,
+    colors
   });
 
   function handleSetTheme(color: "purple" | "red" | "green") {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('@to-do_next:theme', color)
+    }
     setTheme((prevState) => {
       return {
         ...prevState,
@@ -27,6 +30,16 @@ export function ThemeContextProvider({ children }: Props) {
       };
     });
   }
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+     setTheme({
+      main: localStorage.getItem('@to-do_next:theme') as Theme["main"] ?? "purple",
+      colors,
+    }) 
+    }
+  }, [])
+
 
   return (
     <ThemeContext.Provider value={{ theme, handleSetTheme }}>
